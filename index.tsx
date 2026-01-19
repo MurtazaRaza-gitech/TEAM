@@ -123,7 +123,7 @@ const TEAM_MEMBERS: Member[] = [
   { name: "Huzaifa Hassan", role: "Full Stack Dev", bio: "Specialist in end-to-end MERN applications.", whatsapp: "https://wa.me/+923295111162" },
   { name: "Haseeb Ahmad", role: "Backend Dev", bio: "Expertise in PostgreSQL and REST APIs.", whatsapp: "https://wa.me/+923117705430" },
   { name: "Rameen Ali", role: "UI Designer", bio: "Focus on Responsive Design and styling.", whatsapp: "https://wa.me/+923127641850" },
-  { name: "Rizwan Iqbal", role: "Systems Dev", bio: "Specializing in SQL and Web Development.", whatsapp: "https://wa.me/+923206224938" }
+  { name: "Rizwan Iqbal", role: "Python & C++ (Advance)", bio: "Specializing in SQL and Web Development.", whatsapp: "https://wa.me/+923206224938" }
 ];
 
 const ROADMAP_CONTENT = {
@@ -314,22 +314,28 @@ const Leadership = () => (
     <section className="pt-20 text-center"><AnimatedSection><h1 className="text-5xl md:text-7xl font-black italic uppercase gradient-text">Founders</h1></AnimatedSection></section>
     <div className="max-w-7xl mx-auto space-y-32 mt-20">
       {LEADERSHIP_CONTENT.map((l: Leader, i: number) => (
-        <AnimatedSection key={l.name} className={`flex flex-col ${i % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-16`}>
-          <div className="w-full md:w-1/3 bg-gray-900/50 p-8 rounded-[3rem] border border-purple-900/20 text-center sticky top-32">
-            <div className="aspect-square rounded-2xl bg-black mb-6 flex items-center justify-center"><Rocket className="w-24 h-24 text-purple-500/20" /></div>
-            <h3 className="text-2xl font-black italic">{l.name}</h3>
-            <p className="text-purple-400 font-bold uppercase text-xs mb-6 tracking-widest">{l.role}</p>
+        <AnimatedSection key={l.name} className={`flex flex-col ${i % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-16 items-start`}>
+          {/* Profile Card: Restricted sticky to medium screens and up to prevent overlap on mobile */}
+          <div className="w-full md:w-1/3 bg-gray-900/50 p-8 rounded-[3rem] border border-purple-900/20 text-center relative md:sticky md:top-32 z-10">
+            <div className="aspect-square rounded-2xl bg-black mb-6 flex items-center justify-center shadow-inner border border-purple-500/10">
+              <Rocket className="w-24 h-24 text-purple-500/20" />
+            </div>
+            <h3 className="text-2xl font-black italic text-white tracking-tight">{l.name}</h3>
+            <p className="text-purple-400 font-bold uppercase text-xs mb-6 tracking-[0.2em] mt-1">{l.role}</p>
             <div className="flex justify-center gap-4">
-               <a href={l.whatsapp} target="_blank" className="p-3 bg-gray-800 rounded-xl hover:bg-green-500/20 transition-all"><MessageCircle className="w-5 h-5" /></a>
-               <a href={l.linkedin} target="_blank" className="p-3 bg-gray-800 rounded-xl hover:bg-blue-500/20 transition-all"><Linkedin className="w-5 h-5" /></a>
-               <a href={l.email} className="p-3 bg-gray-800 rounded-xl hover:bg-purple-500/20 transition-all"><Mail className="w-5 h-5" /></a>
+               <a href={l.whatsapp} target="_blank" className="p-4 bg-gray-800 rounded-2xl hover:bg-green-500/20 border border-transparent hover:border-green-500/50 transition-all flex items-center justify-center"><MessageCircle className="w-5 h-5 text-gray-400 hover:text-green-400" /></a>
+               <a href={l.linkedin} target="_blank" className="p-4 bg-gray-800 rounded-2xl hover:bg-blue-500/20 border border-transparent hover:border-blue-500/50 transition-all flex items-center justify-center"><Linkedin className="w-5 h-5 text-gray-400 hover:text-blue-400" /></a>
+               <a href={l.email} className="p-4 bg-gray-800 rounded-2xl hover:bg-purple-500/20 border border-transparent hover:border-purple-500/50 transition-all flex items-center justify-center"><Mail className="w-5 h-5 text-gray-400 hover:text-purple-400" /></a>
             </div>
           </div>
-          <div className="flex-1 space-y-8">
-            <p className="text-2xl text-gray-300 font-light leading-relaxed">{l.bio}</p>
+          <div className="flex-1 w-full space-y-8 relative z-0">
+            <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic md:not-italic">"{l.bio}"</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {l.skills.map((s: string, idx: number) => (
-                <div key={idx} className="p-4 bg-gray-900/30 rounded-xl border border-purple-900/10 flex items-center"><div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-4" />{s}</div>
+                <div key={idx} className="p-5 bg-gray-900/30 rounded-2xl border border-purple-900/10 flex items-center hover:bg-purple-900/5 transition-colors group">
+                  <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-4 group-hover:scale-125 transition-transform" />
+                  <span className="text-gray-300 group-hover:text-white transition-colors">{s}</span>
+                </div>
               ))}
             </div>
           </div>
