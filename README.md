@@ -1,20 +1,41 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img width="1200" height="475" alt="TEAM Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+
+  # 🚀 TEAM - Building Impactful AI Products for the World
+  **Modern • Visionary • Minimal • AI-Focused**
+
+  [Explore Our Work](#-what-we-do) • [Our Vision](#-vision--mission) • [Meet the Team](#-the-architects)
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## 📖 Our Story
+Founded in 2023 by college student **Shehram Mehmood**, **TEAM** began with a simple goal: building a company from the ground up. Today, we are a collaborative group of 10+ members dedicated to designing ethical and scalable AI applications.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1tyD6HaA3ZHDVqh1rZHgvpq9eVaQql3ph
+## 🎯 Vision & Mission
+* **Vision:** To build a global company that creates AI-powered products improving how people understand, manage, and interact with their lives.
+* **Mission:** To design thoughtful, ethical, and scalable AI applications by combining technology, creativity, and human-centered thinking.
 
-## Run Locally
+## 🛠️ What We Do
+We specialize in **AI Product Development**, building high-performance digital ecosystems and long-term product platforms.
 
-**Prerequisites:**  Node.js
+## 🏗️ The Architects (Founders)
+* **Shehram Mehmood** - *Founder & CEO* (The Architect)
+* **Murtaza Raza** - *Co-Founder*
+* **Hussnain Zia Ullah** - *Co-Founder*
 
+## 💻 Tech Stack
+Our development is powered by modern, scalable technologies:
+* **Frontend:** Next.js, React, Tailwind CSS
+* **Backend:** Node.js, PostgreSQL, REST APIs
+* **AI Engine:** Gemini API, RAG-Based AI Systems
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+
+## 🚀 Getting Started (Development)
+
+**Prerequisites:** Node.js (Latest LTS)
+
+1. **Install dependencies:**
+   ```bash
+   npm install
