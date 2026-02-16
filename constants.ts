@@ -175,8 +175,3 @@ export const ROADMAP_CONTENT = {
   shortTerm: ["Launch first consumer applications", "Strengthen AI infrastructure"],
   longTerm: ["Expand into multiple AI-driven verticals", "Build a connected ecosystem of products", "Operate globally"]
 };
-
-export const ROADMAP_CONTENT = {
-  shortTerm: ["Launch first consumer applications", "Strengthen AI infrastructure"],
-  longTerm: ["Expand into multiple AI-driven verticals", "Build a connected ecosystem of products", "Operate globally"]
-};

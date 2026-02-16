@@ -14,6 +14,7 @@ interface Leader {
   name: string;
   role: string;
   bio: string;
+  imageUrl: string;
   linkedin: string;
   whatsapp: string;
   email: string;
@@ -24,6 +25,7 @@ interface Member {
   name: string;
   role: string;
   bio: string;
+  imageUrl?: string;
   whatsapp: string;
   linkedin?: string;
   email?: string;
@@ -90,6 +92,7 @@ const LEADERSHIP_CONTENT: Leader[] = [
   {
     name: "M. Shehram Mehmood",
     role: "Founder",
+    imageUrl: "https://lh3.googleusercontent.com/d/1vKw81k19cLKaXE2iwLKMtW0xOa2yisn3",
     bio: "Shehram is a young entrepreneur, web developer, and anime writer focusing on scalable AI systems. He founded TEAM with a vision for long-term product clarity.",
     linkedin: "https://www.linkedin.com/in/m-shehram-6a706639b/",
     whatsapp: "https://wa.me/+923127641850",
@@ -99,6 +102,7 @@ const LEADERSHIP_CONTENT: Leader[] = [
   {
     name: "Hussnain Zia Ullah",
     role: "Co-Founder",
+    imageUrl: "https://lh3.googleusercontent.com/d/1HSRMqvbbNMFu83j6UfYbJz-T0NrX8r3q",
     bio: "Hussnain brings high-performance backend expertise and a creative eye for motion graphics. He leads creative direction at TEAM.",
     linkedin: "https://www.linkedin.com/in/hussnain-zia-ullah-22bb733a6/",
     whatsapp: "https://wa.me/+923287042651",
@@ -108,22 +112,63 @@ const LEADERSHIP_CONTENT: Leader[] = [
   {
     name: "Murtaza Raza",
     role: "Co-Founder",
+    imageUrl: "https://lh3.googleusercontent.com/d/1gVkCPeQA2ljGPsaESCJT5G-7wUSg5C0W",
     bio: "Murtaza specializes in data-driven insights and streamlined deployment. He ensures the technical foundation of TEAM products is secure.",
     linkedin: "https://www.linkedin.com/in/murtaza-raza-85365a397/",
     whatsapp: "https://wa.me/+923091070382",
     email: "mailto:murtazaraza2286@gmail.com",
-    skills: ["Modern Web Dev", "MySQL Integration", "Security Fundamentals", "SEO & Content Strategy"]
+    skills: ["Modern Web Dev", "Frontend Development", "Security Fundamentals", "SEO & Content Strategy"]
   }
 ];
 
 const TEAM_MEMBERS: Member[] = [
-  { name: "Muhammad Umar Shafiq", role: "AI Developer", bio: "Expert in C++, Python, and RAG-Based AI Systems.", whatsapp: "https://wa.me/+923700430532" },
-  { name: "Muhammad Bilal Sheikh", role: "MERN Developer", bio: "Aspiring developer proficient in React and Node.", whatsapp: "https://wa.me/+923001772007" },
-  { name: "Hassnain Zaheer", role: "Frontend Dev", bio: "Focus on polished web experiences.", whatsapp: "https://wa.me/+923315647809" },
-  { name: "Huzaifa Hassan", role: "Full Stack Dev", bio: "Specialist in end-to-end MERN applications.", whatsapp: "https://wa.me/+923295111162" },
-  { name: "Haseeb Ahmad", role: "Backend Dev", bio: "Expertise in PostgreSQL and REST APIs.", whatsapp: "https://wa.me/+923117705430" },
-  { name: "Rameen Ali", role: "UI Designer", bio: "Focus on Responsive Design and styling.", whatsapp: "https://wa.me/+923127641850" },
-  { name: "Rizwan Iqbal", role: "Python & C++ (Advance)", bio: "Specializing in SQL and Web Development.", whatsapp: "https://wa.me/+923206224938" }
+  { 
+    name: "Muhammad Umar Shafiq", 
+    role: "AI Developer", 
+    bio: "Expert in C++, Python, and RAG-Based AI Systems.", 
+    imageUrl: "https://lh3.googleusercontent.com/d/1XGS5MyyCQhyxWb-HBoiTrlalYfjd7-jo",
+    whatsapp: "https://wa.me/+923700430532" 
+  },
+  { 
+    name: "Muhammad Bilal Sheikh", 
+    role: "MERN Developer", 
+    bio: "Aspiring developer proficient in React and Node.", 
+    imageUrl: "https://lh3.googleusercontent.com/d/18KpbaaDy2m9Q-Vpw1_ebsxAgL4Xlxr_A",
+    whatsapp: "https://wa.me/+923001772007" 
+  },
+  { 
+    name: "Hassnain Zaheer", 
+    role: "Frontend Dev", 
+    bio: "Focus on polished web experiences.", 
+    imageUrl: "https://lh3.googleusercontent.com/d/1GB09-VrpKSIHPac8faJX_xQ7fgoz0TfV",
+    whatsapp: "https://wa.me/+923315647809" 
+  },
+  { 
+    name: "Huzaifa Hassan", 
+    role: "Full Stack Dev", 
+    bio: "Specialist in end-to-end MERN applications.", 
+    imageUrl: "https://lh3.googleusercontent.com/d/1kO5KN64x-ish7vxj_7qfdO7tdkM0b6MQ",
+    whatsapp: "https://wa.me/+923295111162" 
+  },
+  { 
+    name: "Haseeb Ahmad", 
+    role: "Backend Dev", 
+    bio: "Expertise in PostgreSQL and REST APIs.", 
+    whatsapp: "https://wa.me/+923117705430" 
+  },
+  { 
+    name: "Rameen Ali", 
+    role: "UI Designer", 
+    bio: "Focus on Responsive Design and styling.", 
+    whatsapp: "https://wa.me/+923127641850" 
+  },
+  { 
+    name: "Rizwan Iqbal", 
+    role: "Python & C++ (Advance)", 
+    bio: "Specializing in SQL and Web Development.", 
+    imageUrl: "https://lh3.googleusercontent.com/d/1TFITC80kEpaxFSMnEoC8c9e53YJ62Y7J",
+    whatsapp: "https://wa.me/+923206224938" 
+  }
 ];
 
 const ROADMAP_CONTENT = {
@@ -315,10 +360,14 @@ const Leadership = () => (
     <div className="max-w-7xl mx-auto space-y-32 mt-20">
       {LEADERSHIP_CONTENT.map((l: Leader, i: number) => (
         <AnimatedSection key={l.name} className={`flex flex-col ${i % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-16 items-start`}>
-          {/* Profile Card: Restricted sticky to medium screens and up to prevent overlap on mobile */}
+          {/* Profile Card */}
           <div className="w-full md:w-1/3 bg-gray-900/50 p-8 rounded-[3rem] border border-purple-900/20 text-center relative md:sticky md:top-32 z-10">
-            <div className="aspect-square rounded-2xl bg-black mb-6 flex items-center justify-center shadow-inner border border-purple-500/10">
-              <Rocket className="w-24 h-24 text-purple-500/20" />
+            <div className="aspect-square rounded-2xl bg-black mb-6 flex items-center justify-center shadow-inner border border-purple-500/10 overflow-hidden">
+              {l.imageUrl ? (
+                <img src={l.imageUrl} alt={l.name} className="w-full h-full object-cover object-top" />
+              ) : (
+                <Rocket className="w-24 h-24 text-purple-500/20" />
+              )}
             </div>
             <h3 className="text-2xl font-black italic text-white tracking-tight">{l.name}</h3>
             <p className="text-purple-400 font-bold uppercase text-xs mb-6 tracking-[0.2em] mt-1">{l.role}</p>
@@ -352,7 +401,13 @@ const TeamPage = () => (
       {TEAM_MEMBERS.map((m: Member, i: number) => (
         <div key={i} className="p-8 bg-gray-900/30 border border-purple-900/10 rounded-3xl flex flex-col justify-between hover:border-purple-500/40 transition-all group">
           <div>
-            <div className="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mb-6"><User className="w-6 h-6 text-purple-400" /></div>
+            <div className="w-16 h-16 bg-purple-600/20 rounded-xl flex items-center justify-center mb-6 overflow-hidden relative group-hover:scale-110 transition-transform">
+              {m.imageUrl ? (
+                <img src={m.imageUrl} alt={m.name} className="w-full h-full object-cover object-top" />
+              ) : (
+                <User className="w-8 h-8 text-purple-400" />
+              )}
+            </div>
             <h3 className="text-xl font-black italic">{m.name}</h3>
             <p className="text-purple-400 text-xs font-black uppercase mb-4">{m.role}</p>
             <p className="text-gray-400 text-sm italic mb-6">"{m.bio}"</p>
