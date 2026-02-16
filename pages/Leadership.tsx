@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { LEADERSHIP_CONTENT } from '../constants';
 import AnimatedSection from '../components/AnimatedSection';
@@ -20,7 +21,7 @@ const Leadership: React.FC = () => {
 
       {/* Founders List */}
       <div className="max-w-7xl mx-auto px-6 space-y-24 md:space-y-40">
-        {LEADERSHIP_CONTENT.map((leader, idx) => (
+        {LEADERSHIP_CONTENT.map((leader: any, idx) => (
           <AnimatedSection key={leader.name} className="relative">
             <div className={`flex flex-col ${idx % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 md:gap-20 items-start`}>
               
@@ -28,10 +29,21 @@ const Leadership: React.FC = () => {
               <div className="w-full md:w-5/12 lg:w-4/12 relative md:sticky md:top-32 z-10">
                 <div className="p-0.5 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl">
                   <div className="bg-black p-6 md:p-8 rounded-[1.9rem] md:rounded-[2.4rem]">
-                    {/* Icon Container */}
-                    <div className="w-full h-48 sm:h-64 md:aspect-square rounded-2xl bg-gray-900/50 flex items-center justify-center mb-8 relative overflow-hidden group/img border border-purple-500/10">
-                       <Rocket className="w-16 h-16 md:w-24 md:h-24 text-purple-500/20 group-hover/img:scale-110 transition-transform duration-700" />
-                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    {/* Image/Icon Container */}
+                    <div className="w-full h-64 sm:h-80 md:aspect-square rounded-2xl bg-gray-900/50 flex items-center justify-center mb-8 relative overflow-hidden group/img border border-purple-500/10">
+                       {leader.imageUrl ? (
+                         <img 
+                           src={leader.imageUrl} 
+                           alt={leader.name}
+                           className="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-700"
+                           onError={(e) => {
+                             (e.target as HTMLImageElement).src = "https://via.placeholder.com/400x400/111/444?text=TEAM";
+                           }}
+                         />
+                       ) : (
+                         <Rocket className="w-16 h-16 md:w-24 md:h-24 text-purple-500/20 group-hover/img:scale-110 transition-transform duration-700" />
+                       )}
+                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 pointer-events-none" />
                     </div>
                     
                     {/* Identity */}
@@ -89,7 +101,7 @@ const Leadership: React.FC = () => {
                 <div className="space-y-8">
                   <h4 className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-purple-500">Core Expertise & Focus</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {leader.skills.map((skill, i) => (
+                    {leader.skills.map((skill: string, i: number) => (
                       <div key={i} className="group p-5 bg-gray-900/20 border border-purple-900/10 rounded-2xl hover:border-purple-500/30 hover:bg-purple-900/5 transition-all flex items-center">
                         <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-4 group-hover:scale-150 transition-transform shadow-[0_0_8px_rgba(168,85,247,0.5)]" />
                         <span className="text-gray-300 group-hover:text-white font-medium text-sm md:text-lg leading-snug">{skill}</span>
