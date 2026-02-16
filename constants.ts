@@ -1,4 +1,3 @@
-
 export const COMPANY_NAME = "TEAM";
 
 export const HOME_CONTENT = {
@@ -53,6 +52,7 @@ export const LEADERSHIP_CONTENT = [
   {
     name: "M. Shehram Mehmood",
     role: "Founder",
+    imageUrl: "https://lh3.googleusercontent.com/d/1vKw81k19cLKaXE2iwLKMtW0xOa2yisn3",
     bio: "Shehram is a young entrepreneur, web developer, and anime writer focusing on scalable AI systems. He founded TEAM with a vision for long-term product clarity and systems that scale responsibly.",
     linkedin: "https://www.linkedin.com/in/m-shehram-6a706639b/",
     whatsapp: "https://wa.me/+923127641850",
@@ -71,6 +71,7 @@ export const LEADERSHIP_CONTENT = [
   {
     name: "Hussnain Zia Ullah",
     role: "Co-Founder",
+    imageUrl: "https://lh3.googleusercontent.com/d/1HSRMqvbbNMFu83j6UfYbJz-T0NrX8r3q",
     bio: "Hussnain brings high-performance backend expertise and a creative eye for motion graphics. He leads creative direction and mobile architecture at TEAM.",
     linkedin: "https://www.linkedin.com/in/hussnain-zia-ullah-22bb733a6/",
     whatsapp: "https://wa.me/+923287042651",
@@ -88,6 +89,7 @@ export const LEADERSHIP_CONTENT = [
   {
     name: "Murtaza Raza",
     role: "Co-Founder",
+    imageUrl: "https://lh3.googleusercontent.com/d/1gVkCPeQA2ljGPsaESCJT5G-7wUSg5C0W",
     bio: "Murtaza specializes in data-driven insights and streamlined deployment. He ensures the technical foundation of TEAM products is secure and scalable.",
     linkedin: "https://www.linkedin.com/in/murtaza-raza-85365a397/",
     whatsapp: "https://wa.me/+923091070382",
@@ -97,7 +99,7 @@ export const LEADERSHIP_CONTENT = [
       "Modern Web Dev (PHP/HTML/CSS)",
       "UI/UX Prototyping (Figma/Canva)",
       "Git, GitHub & Vercel",
-      "MySQL Database Integration",
+      "Frontend Development",
       "Security Fundamentals",
       "SEO & Content Strategy",
       "Multidisciplinary Management"
@@ -110,6 +112,7 @@ export const TEAM_MEMBERS = [
     name: "Muhammad Umar Shafiq", 
     role: "AI Chatbot Developer", 
     bio: "Expert in C++, Python, and RAG-Based AI Systems. Specializing in Software, Frontend, and IoT (ESP32).",
+    imageUrl: "https://lh3.googleusercontent.com/d/1XGS5MyyCQhyxWb-HBoiTrlalYfjd7-jo",
     whatsapp: "https://wa.me/+923700430532",
     linkedin: "https://www.linkedin.com/in/m-shehram-6a706639b/",
     email: "mailto:Vyora.ai001@gmail.com"
@@ -118,6 +121,7 @@ export const TEAM_MEMBERS = [
     name: "Muhammad Bilal Sheikh", 
     role: "MERN Stack Developer", 
     bio: "Aspiring developer proficient in HTML, CSS, JavaScript, and React.",
+    imageUrl: "https://lh3.googleusercontent.com/d/18KpbaaDy2m9Q-Vpw1_ebsxAgL4Xlxr_A",
     whatsapp: "https://wa.me/+923001772007",
     linkedin: "https://www.linkedin.com/in/m-shehram-6a706639b/",
     email: "mailto:Vyora.ai001@gmail.com"
@@ -126,6 +130,7 @@ export const TEAM_MEMBERS = [
     name: "Hassnain Zaheer", 
     role: "Frontend & Website Developer", 
     bio: "Proficient in HTML/CSS and Python with a focus on polished web experiences.",
+    imageUrl: "https://lh3.googleusercontent.com/d/1GB09-VrpKSIHPac8faJX_xQ7fgoz0TfV",
     whatsapp: "https://wa.me/+923315647809",
     linkedin: "https://www.linkedin.com/in/m-shehram-6a706639b/",
     email: "mailto:Vyora.ai001@gmail.com"
@@ -134,6 +139,7 @@ export const TEAM_MEMBERS = [
     name: "Huzaifa Hassan", 
     role: "Full Stack Developer", 
     bio: "Specialist in the MERN Stack, building robust end-to-end applications.",
+    imageUrl: "https://lh3.googleusercontent.com/d/1kO5KN64x-ish7vxj_7qfdO7tdkM0b6MQ",
     whatsapp: "https://wa.me/+923295111162",
     linkedin: "https://www.linkedin.com/in/m-shehram-6a706639b/",
     email: "mailto:Vyora.ai001@gmail.com"
@@ -158,6 +164,7 @@ export const TEAM_MEMBERS = [
     name: "Rizwan Iqbal", 
     role: "Python & C++ Developer", 
     bio: "Specializing in SQL and Web Development (HTML/CSS/JS).",
+    imageUrl: "https://lh3.googleusercontent.com/d/1TFITC80kEpaxFSMnEoC8c9e53YJ62Y7J",
     whatsapp: "https://wa.me/+923206224938",
     linkedin: "https://www.linkedin.com/in/m-shehram-6a706639b/",
     email: "mailto:Vyora.ai001@gmail.com"
